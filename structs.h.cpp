@@ -1,6 +1,4 @@
-
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 const double PI = 3.14;
@@ -42,35 +40,25 @@ struct Circle {
         return PI * radius * radius;
     }
 };
+struct Rectangle {
+    Point up_left_corner;
+    double side;
 
-int main() {
-    setlocale(LC_ALL, "Russian");
+    void set_rectangle(double x_r, double y_r, double side_r) {
+        up_left_corner.set_point(x_r, y_r);
+        side = side_r;
+    }
 
-    Point point;
-    Circle circle;
+    void get_rectangle() {
+        cout << "левый верхний угол квадрата: (" << up_left_corner.x << ", " << up_left_corner.y << ")" << endl;
+        cout << "длина стороны квадрата: " << side << endl;
+    }
 
-    double x_p, y_p, x_c, y_c, radius_c;
+    double len_rectangle() {
+        return 4 * side;
+    }
 
-    cout << "Введите координаты точки(x y): ";
-    cin >> x_p >> y_p;
-
-    cout << "Введите координаты центра круга(x y): ";
-    cin >> x_c >> y_c;
-
-    cout << "Введите радиус круга: ";
-    cin >> radius_c;
-
-    point.set_point(x_p, y_p);
-    cout << "Точка:" << endl;
-    point.get_point();
-    cout << endl;
-
-    circle.set_circle(x_c, y_c, radius_c);
-    cout << "Круг:" << endl;
-    circle.get_circle();
-
-    cout << "Длина окружности: " << circle.len_circle() << endl;
-    cout << "Площадь круга: " << circle.square_circle() << endl;
-
-    return 0;
-}
+    double square_rectangle() {
+        return side * side;
+    }
+};
