@@ -1,6 +1,7 @@
-#include <structs.h>
+#include "structs.h"
 
 const double RATE = pow(10, -5);
+const double PI = 3.14;
 
 bool equal_nums(double a, double b) {
     return fabs(a - b) < RATE;

@@ -1,4 +1,4 @@
-#include <structs.h>
+#include "structs.h"
 
 bool equal_nums(double a, double b);
 

@@ -1,7 +1,9 @@
 #include <iostream>
+#include <cmath>
+#pragma once
 using namespace std;
 
-const double PI = 3.14;
+extern const double PI;
 
 struct Point {
     double x;
