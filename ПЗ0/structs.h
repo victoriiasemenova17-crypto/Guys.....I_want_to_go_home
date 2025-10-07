@@ -55,7 +55,6 @@ struct Rectangle {
         cout << "левый верхний угол квадрата: (" << up_left_corner.x << ", " << up_left_corner.y << ")" << endl;
         cout << "длина стороны квадрата: " << side << endl;
     }
-
     double len_rectangle() {
         return 4 * side;
     }
