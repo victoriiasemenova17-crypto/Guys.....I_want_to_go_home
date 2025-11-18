@@ -64,7 +64,7 @@ public:
     }
 };
 
-class Advanced_arr : public Dynamic_arr {
+class Advanced_arr: public Dynamic_arr {
 public:
     Advanced_arr(int s) : Dynamic_arr(s) {}
     Advanced_arr(const Dynamic_arr& other) : Dynamic_arr(other) {}
